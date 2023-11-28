@@ -1,0 +1,7 @@
+prompt: 1girl, loli, tears, smile, indoors, arms behind back, bdsm, white rope, twintails, white choker, white hair, nipples, nude
+negative_prompt: worst quality, low quality, blurry, greyscale, monochrome, from side
+denoising_strength: 0.6
+cfg_scale: 7
+sampler_index: DPM++ 2M SDE Karras
+steps: 30
+seed: 99

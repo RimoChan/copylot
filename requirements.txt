@@ -1,0 +1,9 @@
+pynput~=1.7.6
+pywin32~=305
+opencv-python~=4.8.0
+PyYAML~=6.0
+psutil~=5.9.5
+requests~=2.31.0
+psd-tools~=1.9.28
+numpy~=1.24.3
+rimo-utils~=1.7.0
