@@ -9,7 +9,7 @@
 
 ## 示例视频
 
-https://github.com/RimoChan/copylot/assets/20064807/67862357-ddf3-4e0d-ac61-72749c7f6d58
+[output.webm](https://github.com/RimoChan/copylot/assets/20064807/7b1bcaca-75ec-4d89-8eb4-c6e8bea71867)
 
 
 ## 使用方法
