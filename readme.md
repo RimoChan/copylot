@@ -9,6 +9,7 @@
 
 ## 示例视频
 
+https://github.com/RimoChan/copylot/assets/20064807/67862357-ddf3-4e0d-ac61-72749c7f6d58
 
 
 ## 使用方法
