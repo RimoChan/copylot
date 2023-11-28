@@ -1,4 +1,4 @@
-# 【copylot】Photoshop实时stable diffusion插件
+# 【copylot】Photoshop的实时stable diffusion插件！
 
 大家有用过Github Copilot吗？Github Copilot可以在你写代码的时候，帮你把你不会写或者懒得写的部分直接写出来。
 
@@ -21,7 +21,14 @@
 
 - 把这个仓库clone回去，然后运行`pip install requirements.txt`。
 
-- 运行`python copylot.py`。运行参数都写在代码里，直接改掉就可以了，不过调用stable diffusion API的参数是写在`设置文件`里的，这部分参数在运行时可以动态刷新。
+- 运行`python copylot.py`就可以了。运行参数都写在代码里，直接改掉就可以了，不过调用stable diffusion API的参数是写在`设置文件`里的，这部分参数在运行时可以动态刷新。
+
+
+## 已知bug
+
+由于这个插件的实现非常奇怪，所以可能出现各种异常。
+
+比如Photoshop突然鬼畜，发出异响什么的，都是正常的……
 
 
 ## 结束
