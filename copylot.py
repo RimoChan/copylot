@@ -36,11 +36,12 @@ API = 'http://localhost:7860/sdapi/v1/img2img'
 def 当前窗口() -> str:
     hwnd = win32gui.GetForegroundWindow()
     threadid, pid = win32process.GetWindowThreadProcessId(hwnd)
+    text = win32gui.GetWindowText(hwnd) or ''
     try:
         exe = psutil.Process(pid).exe()
     except Exception:
         exe = ''
-    return exe
+    return exe, text
 
 _上次修改时间 = 0
 
@@ -89,7 +90,8 @@ while True:
             当前按键.pop(k, None)
         if t - v > 10:
             当前按键.pop(k, None)
-    if 当前窗口().lower().endswith('photoshop.exe') and not 当前按键:
+    exe, text = 当前窗口()
+    if exe.lower().endswith('photoshop.exe') and ('*' in text) and not 当前按键:
         t = time.time()
         if t - 上次保存时间 > 0.5:
             上次保存时间 = t
