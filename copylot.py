@@ -42,7 +42,7 @@ def 当前窗口() -> str:
         exe = ''
     return exe
 
-上次修改时间 = 0
+_上次修改时间 = 0
 
 当前按键 = {}
 pynput.keyboard.Listener(
@@ -54,7 +54,7 @@ keyboard_controller = Controller()
 while True:
     try:
         上次修改时间 = max(os.path.getmtime(设置文件), os.path.getmtime(psd文件))
-        if 上次修改时间 > 上次修改时间 + 0.00001:
+        if 上次修改时间 > _上次修改时间 + 0.00001:
             with 计时('预处理'):
                 setting = yaml.safe_load(open(设置文件))
                 p = psd_tools.PSDImage.open(psd文件)
@@ -79,7 +79,7 @@ while True:
             with 计时('后处理'):
                 图 = [base64.b64decode(b64) for b64 in r.json()['images']][0]
                 img = cv2.imdecode(np.frombuffer(图, dtype=np.uint8), cv2.IMREAD_COLOR)
-            上次修改时间 = 上次修改时间
+            _上次修改时间 = 上次修改时间
     except Exception:
         logging.exception('奇怪！')
         time.sleep(0.5)
