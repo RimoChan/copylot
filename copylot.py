@@ -75,7 +75,7 @@ while True:
                     else:
                         设置['width'] = int(设置['width'] * 边长限制 / 设置['height'])
                         设置['height'] = 边长限制
-                r = requests.post(url=f'http://rimo-server:7860/sdapi/v1/img2img', json=设置)
+                r = requests.post(url=f'{API}', json=设置)
             with 计时('后处理'):
                 图 = [base64.b64decode(b64) for b64 in r.json()['images']][0]
                 img = cv2.imdecode(np.frombuffer(图, dtype=np.uint8), cv2.IMREAD_COLOR)
